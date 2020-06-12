@@ -81,7 +81,32 @@ public class DemoUserRegistration {
 	}
 
 
-	@Test(priority=4)	
+	@Test(priority=4)
+	public void select_CheckBoxes_hobby() {
+
+		driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).click();
+
+
+		// and condition is true , when all are true, if not false 
+		if(driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).isSelected()==true &&  driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).isSelected()==true){
+
+			System.out.println("Hockey and  movie  hobby selected");
+		}
+
+		// if any of them is true, whole statement become true doest chk 2nd statement
+
+		if(driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).isSelected()==true || driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).isSelected()==true){
+
+			System.out.println("Hockey or   movie  hobby selected");
+		}
+
+
+
+	}
+
+
+	@Test(priority=5)	
 	public void select_Language_Dropdown_Test() {
 
 		driver.findElement(By.id("msdd")).click();
@@ -105,12 +130,12 @@ public class DemoUserRegistration {
 
 		}
 	}
-	
-	
-	
-	@Test(priority=5)
+
+
+
+	@Test(priority=6)
 	public void select_DateofBirth_DropdownTest() throws InterruptedException {
-		
+
 		driver.findElement(By.id("yearbox")).click();Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[@id=\"yearbox\"]/option[77]")).click();
 
@@ -124,15 +149,15 @@ public class DemoUserRegistration {
 		driver.findElement(By.id("secondpassword")).sendKeys("35235");
 
 		driver.findElement(By.id("submitbtn")).click();
-		
-			
+
+
 	}
-	
-	
-	
-	@Test(priority=6)
+
+
+
+	@Test(priority=7)
 	public void mouseHover_Alertmethod_Test() throws InterruptedException {
-		
+
 		Actions action2=new Actions(driver);
 
 		action2.moveToElement(driver.findElement(By.xpath("//*[@id=\"header\"]/nav/div/div[2]/ul/li[4]/a"))).build().perform();
@@ -152,16 +177,16 @@ public class DemoUserRegistration {
 		System.out.println("Alert msg is "+actual_msg);
 
 		driver.switchTo().alert().accept();
-		
-		
+
+
 	}
 
 
 	@AfterTest(enabled=false)
 	public void tearDownTest() {
 
-				driver.close();
-				System.out.println("Test Completed Successfully");
+		driver.close();
+		System.out.println("Test Completed Successfully");
 	}
 
 }

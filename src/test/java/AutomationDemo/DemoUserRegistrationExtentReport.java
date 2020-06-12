@@ -48,9 +48,7 @@ public class DemoUserRegistrationExtentReport {
 
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
-		//driver.manage().window().maximize(); //maximize browser
-
-
+		//driver.manage().window().maximize(); //maximize browserr
 
 	}
  
@@ -76,6 +74,7 @@ public class DemoUserRegistrationExtentReport {
 
 		// test with snapshot
 		test.addScreenCaptureFromPath("screenshot.png");
+		
 		
 		/*-------------------------------------Extent methods----------------------------------------------------------------*/
 
@@ -134,18 +133,50 @@ public class DemoUserRegistrationExtentReport {
 		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[5]/div/label[1]/input")).click();
 
 		if(driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[5]/div/label[1]/input")).isSelected()==true) {
+				
+			System.out.println("Gender male is selected");
 
-			//System.out.println("Gender male is selected");
-
-			test.pass("Gender male is selected");
+			test.pass("Gender male is selectedd");
 		}
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	@Test(priority=4)
+	public void select_CheckBoxes_hobby() {
+
+		ExtentTest test = extent.createTest("select_CheckBoxes_hobby", "Selecting Hobbbies from the CheckBoxes");
+		
+		driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).click();
+
+
+		// and condition is true , when all are true, if not false 
+		if(driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).isSelected()==true &&  driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).isSelected()==true){
+
+			System.out.println("Hockey and  movie  hobby selected");
+		}
+
+		// if any of them is true, whole statement become true doest chk 2nd statement
+
+		if(driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).isSelected()==true || driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).isSelected()==true){
+
+			System.out.println("Hockey or   movie  hobby selected");
+			test.pass("Hobbies has been selected");
+		}
+
+
 
 	}
 
 
 
-
-	@Test(priority=4)	
+	@Test(priority=5)	
 	public void select_Language_Dropdown_Test() {
 
 		ExtentTest test = extent.createTest("select_Language_Dropdown_Test", "Select Preferred language from the dropdown menu ");
@@ -161,7 +192,7 @@ public class DemoUserRegistrationExtentReport {
 
 			System.out.println(list.get(i).getText());  //print all elements
 
-			if(list.get(i).getText().contains("English")) {
+			if(list.get(i).getText().contains("Arabic")) {
 
 				list.get(i).click();
 
@@ -176,18 +207,18 @@ public class DemoUserRegistrationExtentReport {
 	}
 
 
-	@Test(priority=5)
+	@Test(priority=6)
 	public void select_DateofBirth_DropdownTest() throws InterruptedException {
 
 		ExtentTest test = extent.createTest("select_DateofBirth_DropdownTest", "Select Date of Birth & Set Password");
 
-		driver.findElement(By.id("yearbox")).click();Thread.sleep(5000);
+		driver.findElement(By.id("yearbox")).click();Thread.sleep(1500);
 		driver.findElement(By.xpath("//*[@id=\"yearbox\"]/option[77]")).click();
 
-		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[11]/div[2]/select")).click();Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[11]/div[2]/select")).click();Thread.sleep(1500);
 		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[11]/div[2]/select/option[12]")).click();
 
-		driver.findElement(By.id("daybox")).click();Thread.sleep(5000);
+		driver.findElement(By.id("daybox")).click();Thread.sleep(1500);
 		driver.findElement(By.xpath("//*[@id=\"daybox\"]/option[15]")).click();
 
 		driver.findElement(By.id("firstpassword")).sendKeys("12345");
@@ -202,7 +233,7 @@ public class DemoUserRegistrationExtentReport {
 
 
 
-	@Test(priority=6)
+	@Test(priority=7)
 	public void mouseHover_Alertmethod_Test() throws InterruptedException {
 
 
