@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MultiBrowserTest.TestNGMultiBrowserTest">
+      <class name="AssertionDemo.TestNGAseertion">
         <methods>
-          <include name="setUp"/>
-          <include name="fillFormTest"/>
-          <include name="tearDown"/>
+          <include name="hardAssertionTest"/>
+          <include name="softAssertionTest"/>
         </methods>
-      </class> <!-- MultiBrowserTest.TestNGMultiBrowserTest -->
+      </class> <!-- AssertionDemo.TestNGAseertion -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
