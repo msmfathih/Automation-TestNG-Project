@@ -155,7 +155,6 @@ public class DemoUserRegistrationExtentReport {
 		driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).click();
 		driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).click();
 
-
 		// and condition is true , when all are true, if not false 
 		if(driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).isSelected()==true &&  driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).isSelected()==true){
 
@@ -163,14 +162,11 @@ public class DemoUserRegistrationExtentReport {
 		}
 
 		// if any of them is true, whole statement become true doest chk 2nd statement
-
 		if(driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).isSelected()==true || driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).isSelected()==true){
 
 			System.out.println("Hockey or   movie  hobby selected");
 			test.pass("Hobbies has been selected");
 		}
-
-
 
 	}
 
@@ -186,6 +182,7 @@ public class DemoUserRegistrationExtentReport {
 		List<WebElement> list=(List<WebElement>) driver.findElements(By.xpath("//ul[contains(@class,'ui-corner-all')]//li//a"));
 
 		System.out.println(list.size());
+	
 
 		//select only one language 
 		for(int i=0; i<list.size(); i++){
@@ -203,7 +200,7 @@ public class DemoUserRegistrationExtentReport {
 
 		}
 
-		test.pass("Language EnglishSelected");
+		test.pass("Language English Selected");
 	}
 
 
@@ -235,7 +232,6 @@ public class DemoUserRegistrationExtentReport {
 
 	@Test(priority=7)
 	public void mouseHover_Alertmethod_Test() throws InterruptedException {
-
 
 		ExtentTest test = extent.createTest("mouseHover_Alertmethod_Test", "Navigate into ALert page and click & Capture text in the Alert");
 

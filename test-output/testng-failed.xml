@@ -3,18 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AutomationDemo.DemoUserRegistrationExtentReport">
+      <class name="MultiBrowserTest.TestNGMultiBrowserTest">
         <methods>
-          <include name="mouseHover_Alertmethod_Test"/>
           <include name="select_Language_Dropdown_Test"/>
-          <include name="select_RadioBtn_GenderTest"/>
-          <include name="select_DateofBirth_DropdownTest"/>
-          <include name="fillFormTest"/>
-          <include name="setUpTest"/>
           <include name="chooseUploadFileTest"/>
-          <include name="tearDownTest"/>
+          <include name="setUp"/>
+          <include name="fillFormTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- AutomationDemo.DemoUserRegistrationExtentReport -->
+      </class> <!-- MultiBrowserTest.TestNGMultiBrowserTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

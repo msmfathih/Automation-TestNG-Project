@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class searchProduct {
 
@@ -24,24 +25,26 @@ public class searchProduct {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		driver.manage().window().maximize(); 
 
-		//driver.get("https://www.amazon.ae/");
+	
 
-		driver.get("https://www.google.com/");
 
-		//		searchProduct.searchLaptop(driver);
-		//		searchProduct.priceRange(driver);
-		//		
+//				searchProduct.searchLaptop(driver);
+//				searchProduct.priceRange(driver);
+				
 		searchProduct.googleSearch(driver);
 
 	} 
 
 
 
-
+	@Test
 	public static void googleSearch(WebDriver driver) throws InterruptedException {
 
 
 		driver.get("https://www.google.com/"); 
+		
+		driver.navigate().refresh();
+		//driver.navigate().back();
 
 		driver.findElement(By.xpath("//*[@id=\"SIvCob\"]/a[2]")).click();
 		Thread.sleep(1500);
@@ -70,6 +73,8 @@ public class searchProduct {
 
 
 	public static void searchLaptop(WebDriver driver) throws InterruptedException {
+		
+		driver.get("https://www.amazon.ae/");
 
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Mac book pro 16 inch");
 		Thread.sleep(2000);
@@ -101,7 +106,7 @@ public class searchProduct {
 
 		driver.findElement(By.xpath("//*[@id=\"a-autoid-1\"]/span/input")).click();
 
-		driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[2]/div/span[3]/div[2]/div[2]/div/span/div/div/div[2]/div[2]/div/div[1]/div/div/div[1]/h2/a/span")).click();
+		//driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[3]/div[2]/div[1]/div/span/div/div/div[2]/h2/a")).click();
 
 
 	}

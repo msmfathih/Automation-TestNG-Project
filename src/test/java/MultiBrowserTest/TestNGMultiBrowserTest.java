@@ -1,7 +1,10 @@
 package MultiBrowserTest;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.session.FirefoxFilter;
@@ -11,6 +14,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentTest;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 public class TestNGMultiBrowserTest {
@@ -43,7 +49,7 @@ public class TestNGMultiBrowserTest {
 		}
 	}
 
-	@Test
+	@Test(priority=1)
 	public void fillFormTest() throws InterruptedException {
 
 		driver.get("http://demo.automationtesting.in/Register.html");
@@ -66,6 +72,49 @@ public class TestNGMultiBrowserTest {
 
 
 
+	}
+	
+	
+	@Test(priority=3)
+	public void chooseUploadFileTest() throws InterruptedException { 
+
+		String filePath="C:\\Users\\fathih\\eclipse-workspace\\RentVehicals\\images\\licenece copy.jpeg";
+
+		WebElement uploadButton=driver.findElement(By.id("imagesrc"));
+		uploadButton.sendKeys(filePath);
+		Thread.sleep(1500);
+
+	}
+	
+	
+	@Test(priority=2)	
+	public void select_Language_Dropdown_Test() {
+
+
+		driver.findElement(By.id("msdd")).click();
+
+		List<WebElement> list=(List<WebElement>) driver.findElements(By.xpath("//ul[contains(@class,'ui-corner-all')]//li//a"));
+
+		System.out.println(list.size());
+	
+
+		//select only one language 
+		for(int i=0; i<list.size(); i++){
+
+			System.out.println(list.get(i).getText());  //print all elements
+
+			if(list.get(i).getText().contains("Arabic")) {
+
+				list.get(i).click();
+
+				driver.findElement(By.xpath("//*[@id=\"section\"]/div/div")).click();
+				break;
+
+			}
+
+		}
+
+		
 	}
 
 

@@ -1,1 +1,11 @@
+MultiBrowserTest\TestNGMultiBrowserTest.class
+TestNGListeners\TestNGListenersFathi.class
+AmazonSearch\searchProduct.class
+AssertionDemo\TestNGAseertion.class
 AutomationDemo\DemoUserRegistration.class
+dynamicTable\dynamicUser.class
+TestNGListeners\TestNGListenersDemo.class
+AutomationDemo\BaseSetup.class
+TestNGListeners\TestNGListenersDemo2.class
+AutomationDemo\DemoUserRegistrationExtentReport.class
+AutomationDemo\DemoUserRegistrationTesngListerners.class

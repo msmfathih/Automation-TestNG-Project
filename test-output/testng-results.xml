@@ -2,44 +2,70 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34369" started-at="2020-06-08T18:15:47 GST" finished-at="2020-06-08T18:16:21 GST">
+  <suite name="Suite1" duration-ms="45122" started-at="2020-06-13T20:25:34 GST" finished-at="2020-06-13T20:26:19 GST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34369" started-at="2020-06-08T18:15:47 GST" finished-at="2020-06-08T18:16:21 GST">
-      <class name="AutomationDemo.DemoUserRegistrationExtentReport">
-        <test-method status="PASS" signature="setUpTest()[pri:0, instance:AutomationDemo.DemoUserRegistrationExtentReport@d44fc21]" name="setUpTest" is-config="true" duration-ms="6159" started-at="2020-06-08T18:15:41 GST" finished-at="2020-06-08T18:15:47 GST">
+    <test name="TestOnChrome" duration-ms="29462" started-at="2020-06-13T20:25:34 GST" finished-at="2020-06-13T20:26:04 GST">
+      <class name="MultiBrowserTest.TestNGMultiBrowserTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:MultiBrowserTest.TestNGMultiBrowserTest@6895a785]" name="setUp" is-config="true" duration-ms="9655" started-at="2020-06-13T20:25:34 GST" finished-at="2020-06-13T20:25:44 GST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="fillFormTest()[pri:1, instance:AutomationDemo.DemoUserRegistrationExtentReport@d44fc21]" name="fillFormTest" duration-ms="6707" started-at="2020-06-08T18:15:47 GST" finished-at="2020-06-08T18:15:54 GST">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="fillFormTest()[pri:1, instance:MultiBrowserTest.TestNGMultiBrowserTest@6895a785]" name="fillFormTest" duration-ms="11441" started-at="2020-06-13T20:25:44 GST" finished-at="2020-06-13T20:25:55 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormTest -->
-        <test-method status="PASS" signature="chooseUploadFileTest()[pri:2, instance:AutomationDemo.DemoUserRegistrationExtentReport@d44fc21]" name="chooseUploadFileTest" duration-ms="1656" started-at="2020-06-08T18:15:54 GST" finished-at="2020-06-08T18:15:55 GST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chooseUploadFileTest -->
-        <test-method status="PASS" signature="select_RadioBtn_GenderTest()[pri:3, instance:AutomationDemo.DemoUserRegistrationExtentReport@d44fc21]" name="select_RadioBtn_GenderTest" duration-ms="207" started-at="2020-06-08T18:15:55 GST" finished-at="2020-06-08T18:15:56 GST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- select_RadioBtn_GenderTest -->
-        <test-method status="PASS" signature="select_Language_Dropdown_Test()[pri:4, instance:AutomationDemo.DemoUserRegistrationExtentReport@d44fc21]" name="select_Language_Dropdown_Test" duration-ms="899" started-at="2020-06-08T18:15:56 GST" finished-at="2020-06-08T18:15:56 GST">
+        <test-method status="PASS" signature="select_Language_Dropdown_Test()[pri:2, instance:MultiBrowserTest.TestNGMultiBrowserTest@6895a785]" name="select_Language_Dropdown_Test" duration-ms="908" started-at="2020-06-13T20:25:55 GST" finished-at="2020-06-13T20:25:56 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- select_Language_Dropdown_Test -->
-        <test-method status="PASS" signature="select_DateofBirth_DropdownTest()[pri:5, instance:AutomationDemo.DemoUserRegistrationExtentReport@d44fc21]" name="select_DateofBirth_DropdownTest" duration-ms="16571" started-at="2020-06-08T18:15:56 GST" finished-at="2020-06-08T18:16:13 GST">
+        <test-method status="PASS" signature="chooseUploadFileTest()[pri:3, instance:MultiBrowserTest.TestNGMultiBrowserTest@6895a785]" name="chooseUploadFileTest" duration-ms="1586" started-at="2020-06-13T20:25:56 GST" finished-at="2020-06-13T20:25:58 GST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- select_DateofBirth_DropdownTest -->
-        <test-method status="PASS" signature="mouseHover_Alertmethod_Test()[pri:6, instance:AutomationDemo.DemoUserRegistrationExtentReport@d44fc21]" name="mouseHover_Alertmethod_Test" duration-ms="8261" started-at="2020-06-08T18:16:13 GST" finished-at="2020-06-08T18:16:21 GST">
+        </test-method> <!-- chooseUploadFileTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MultiBrowserTest.TestNGMultiBrowserTest@6895a785]" name="tearDown" is-config="true" duration-ms="5782" started-at="2020-06-13T20:25:58 GST" finished-at="2020-06-13T20:26:04 GST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mouseHover_Alertmethod_Test -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:AutomationDemo.DemoUserRegistrationExtentReport@d44fc21]" name="tearDownTest" is-config="true" duration-ms="3218" started-at="2020-06-08T18:16:21 GST" finished-at="2020-06-08T18:16:25 GST">
+        </test-method> <!-- tearDown -->
+      </class> <!-- MultiBrowserTest.TestNGMultiBrowserTest -->
+    </test> <!-- TestOnChrome -->
+    <test name="TestOnFirefox" duration-ms="15607" started-at="2020-06-13T20:26:04 GST" finished-at="2020-06-13T20:26:19 GST">
+      <class name="MultiBrowserTest.TestNGMultiBrowserTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:MultiBrowserTest.TestNGMultiBrowserTest@34cd072c]" name="setUp" is-config="true" duration-ms="3836" started-at="2020-06-13T20:26:04 GST" finished-at="2020-06-13T20:26:08 GST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownTest -->
-      </class> <!-- AutomationDemo.DemoUserRegistrationExtentReport -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="fillFormTest()[pri:1, instance:MultiBrowserTest.TestNGMultiBrowserTest@34cd072c]" name="fillFormTest" duration-ms="8412" started-at="2020-06-13T20:26:08 GST" finished-at="2020-06-13T20:26:16 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillFormTest -->
+        <test-method status="PASS" signature="select_Language_Dropdown_Test()[pri:2, instance:MultiBrowserTest.TestNGMultiBrowserTest@34cd072c]" name="select_Language_Dropdown_Test" duration-ms="543" started-at="2020-06-13T20:26:16 GST" finished-at="2020-06-13T20:26:17 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_Language_Dropdown_Test -->
+        <test-method status="PASS" signature="chooseUploadFileTest()[pri:3, instance:MultiBrowserTest.TestNGMultiBrowserTest@34cd072c]" name="chooseUploadFileTest" duration-ms="1612" started-at="2020-06-13T20:26:17 GST" finished-at="2020-06-13T20:26:18 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseUploadFileTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MultiBrowserTest.TestNGMultiBrowserTest@34cd072c]" name="tearDown" is-config="true" duration-ms="1191" started-at="2020-06-13T20:26:18 GST" finished-at="2020-06-13T20:26:19 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- MultiBrowserTest.TestNGMultiBrowserTest -->
+    </test> <!-- TestOnFirefox -->
+  </suite> <!-- Suite1 -->
 </testng-results>
