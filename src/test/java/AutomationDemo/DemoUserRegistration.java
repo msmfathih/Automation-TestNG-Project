@@ -101,11 +101,10 @@ public class DemoUserRegistration {
 			System.out.println("Hockey or   movie  hobby selected");
 		}
 
-
-
 	}
 
 
+	
 	@Test(priority=5)	
 	public void select_Language_Dropdown_Test() {
 

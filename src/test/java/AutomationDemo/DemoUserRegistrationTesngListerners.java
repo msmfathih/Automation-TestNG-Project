@@ -143,10 +143,7 @@ public class DemoUserRegistrationTesngListerners implements ITestListener {
 	}
 	
 	
-	
-	
-	
-	
+
 	
 	@Test(priority=4)
 	public void select_CheckBoxes_hobby() {
