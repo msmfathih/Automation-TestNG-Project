@@ -7,22 +7,12 @@
       <class name="MultiBrowserTest.TestNGMultiBrowserTest">
         <methods>
           <include name="select_Language_Dropdown_Test"/>
+          <include name="chooseUploadFileTest"/>
           <include name="setUp"/>
+          <include name="fillFormTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- MultiBrowserTest.TestNGMultiBrowserTest -->
     </classes>
   </test> <!-- TestOnChrome(failed) -->
-  <test thread-count="5" name="TestOnFirefox(failed)">
-    <parameter name="browserName" value="chrome"/>
-    <classes>
-      <class name="MultiBrowserTest.TestNGMultiBrowserTest">
-        <methods>
-          <include name="select_Language_Dropdown_Test"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- MultiBrowserTest.TestNGMultiBrowserTest -->
-    </classes>
-  </test> <!-- TestOnFirefox(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

@@ -23,7 +23,7 @@ public class TestNGAseertion {
 	public void hardAssertionTest() {
 		
 		System.out.println("Test 2 Started");
-		Assert.assertEquals(12, 13);
+		Assert.assertEquals(12, 12);
 		System.out.println("Test 2 Completed");
 		
 	}

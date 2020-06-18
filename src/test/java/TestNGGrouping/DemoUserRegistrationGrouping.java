@@ -1,4 +1,6 @@
-package AutomationDemo;
+package TestNGGrouping;
+
+import static org.testng.Assert.assertTrue;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -14,8 +16,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class DemoUserRegistration {
+public class DemoUserRegistrationGrouping {
 
+	private static final String[] login = null;
+	
 	WebDriver driver;
 
 	@BeforeTest()
@@ -30,12 +34,25 @@ public class DemoUserRegistration {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		//driver.manage().window().maximize(); //maximize browser
 
-		driver.get("http://demo.automationtesting.in/Register.html");
+		driver.get("http://demo.automationtesting.in/");
 
 	}
+	
+	
+	@Test(priority=1,groups="login",invocationTimeOut = 30000)
+	
+	public void initialLogin() {
+		
+		driver.findElement(By.id("email")).sendKeys("admin@gmail.com");
+		
+		driver.findElement(By.id("enterimg")).click();
+		
+		//int i =9/0;
+		
+	}
+	
 
-
-	@Test(priority=1)
+	@Test(priority=2, groups="fill form")
 	public void fillFormTest() throws InterruptedException {
 
 		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[1]/input")).sendKeys("mohamed");
@@ -46,18 +63,31 @@ public class DemoUserRegistration {
 
 		driver.findElement(By.xpath("//*[@id=\"eid\"]/input")).sendKeys("admin@gmail.com");
 
-		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[4]/div/input")).sendKeys("0528542762");
-
-		//Verify page title method 1
-		String title=driver.getTitle();
-		System.out.println("This page title is: "+title);
-		Assert.assertEquals(title, "Register");
+		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[4]/div/input")).sendKeys("0528542762");	
 
 	}
 
+	
+	//if initiallogin test fails verify tap title test case also fails or ignore
+	@Test(priority=3,groups="login",dependsOnMethods="initialLogin")
+	public void verifyTapTitle() {
+		 
+		String title=driver.getTitle();
+		System.out.println("This page title is: "+title);
+		Assert.assertEquals(title, "Register");
+		
+	}
+	
+	
+	@Test(priority=4,groups="login",dependsOnMethods="initialLogin")
+	public void verifyRegisterPageNameTitle() {
+		
+		boolean RegisterPageName = driver.getPageSource().contains("Automation Demo Site");
+        assertTrue(RegisterPageName);	
+	}
 
 
-	@Test(priority=2)
+	@Test(priority=5,groups="File upload")
 	public void chooseUploadFileTest() throws InterruptedException { 
 
 		String filePath="C:\\Users\\fathih\\eclipse-workspace\\RentVehicals\\images\\licenece copy.jpeg";
@@ -67,8 +97,9 @@ public class DemoUserRegistration {
 		Thread.sleep(1500);
 
 	}
+	
 
-	@Test(priority=3)
+	@Test(priority=6,groups="Form-radio-button")
 	public void select_RadioBtn_GenderTest() {
 
 		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[5]/div/label[1]/input")).click();
@@ -81,20 +112,16 @@ public class DemoUserRegistration {
 	}
 
 
-	@Test(priority=4)
+	@Test(priority=7,groups="Check-boxes", invocationTimeOut = 10)
 	public void select_CheckBoxes_hobby() {
 
 		driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).click();
 		driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).click();
 
-
-		// and condition is true , when all are true, if not false 
 		if(driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).isSelected()==true &&  driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).isSelected()==true){
 
 			System.out.println("Hockey and  movie  hobby selected");
 		}
-
-		// if any of them is true, whole statement become true doest chk 2nd statement
 
 		if(driver.findElement(By.xpath("//*[@id=\"checkbox3\"]")).isSelected()==true || driver.findElement(By.xpath("//*[@id=\"checkbox2\"]")).isSelected()==true){
 
@@ -105,7 +132,7 @@ public class DemoUserRegistration {
 
 
 	
-	@Test(priority=5)	
+	@Test(priority=8,groups="Drop-Down-menu")	
 	public void select_Language_Dropdown_Test() {
 
 		driver.findElement(By.id("msdd")).click();
@@ -130,23 +157,17 @@ public class DemoUserRegistration {
 		}
 	}
 	
-	//normal dropdown menu
-//	Select sel2 =new Select(driver.findElement(By.xpath("//*[@id=\"month\"]")));
-//	sel2.selectByVisibleText("Feb");
-//	Thread.sleep(3000);
 
-
-
-	@Test(priority=6)
+	@Test(priority=9,groups="Date of Birth")
 	public void select_DateofBirth_DropdownTest() throws InterruptedException {
 
-		driver.findElement(By.id("yearbox")).click();Thread.sleep(5000);
+		driver.findElement(By.id("yearbox")).click();Thread.sleep(1500);
 		driver.findElement(By.xpath("//*[@id=\"yearbox\"]/option[77]")).click();
 
-		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[11]/div[2]/select")).click();Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[11]/div[2]/select")).click();Thread.sleep(1500);
 		driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[11]/div[2]/select/option[12]")).click();
 
-		driver.findElement(By.id("daybox")).click();Thread.sleep(5000);
+		driver.findElement(By.id("daybox")).click();Thread.sleep(1500);
 		driver.findElement(By.xpath("//*[@id=\"daybox\"]/option[15]")).click();
 
 		driver.findElement(By.id("firstpassword")).sendKeys("12345");
@@ -159,7 +180,7 @@ public class DemoUserRegistration {
 
 
 
-	@Test(priority=7)
+	@Test(priority=10,groups="Mouse-Hover")
 	public void mouseHover_Alertmethod_Test() throws InterruptedException {
 
 		Actions action2=new Actions(driver);
@@ -171,13 +192,12 @@ public class DemoUserRegistration {
 
 		driver.findElement(By.xpath("//*[@id=\"OKTab\"]/button")).click();
 
-		Thread.sleep(1500);
-		//		Alert alt=driver.switchTo().alert();
-		//		alt.accept();
+		Thread.sleep(2000);
+
 
 		//capturing alert message
 		String actual_msg=driver.switchTo().alert().getText();
-		Thread.sleep(1500);
+		Thread.sleep(3000);
 		System.out.println("Alert msg is "+actual_msg);
 
 		driver.switchTo().alert().accept();
@@ -186,23 +206,8 @@ public class DemoUserRegistration {
 	}
 
 	
-//	drag and drop
-	
-	
-//	driver.switchTo().frame(0);		
-//	
-//	Thread.sleep(1500);
-//	
-//	WebElement targetElement = driver.findElement(By.id("droparea"));
-//	Thread.sleep(1500);
-//	
-//
-//	Actions action1=new Actions(driver);
-//		
-//	action1.clickAndHold(sourceElement).moveToElement(targetElement).release().build().perform();
-	
 
-	@AfterTest(enabled=false)
+	@AfterTest(enabled=true)
 	public void tearDownTest() {
 
 		driver.close();

@@ -23,6 +23,8 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
+
+
 public class DemoUserRegistrationExtentReport {
 
 	WebDriver driver;
@@ -244,6 +246,7 @@ public class DemoUserRegistrationExtentReport {
 
 		driver.findElement(By.xpath("//*[@id=\"OKTab\"]/button")).click();
 
+	
 		Thread.sleep(1500);
 		//		Alert alt=driver.switchTo().alert();
 		//		alt.accept();
@@ -254,10 +257,28 @@ public class DemoUserRegistrationExtentReport {
 		System.out.println("Alert msg is "+actual_msg);
 
 		driver.switchTo().alert().accept();
-
+		
 		test.pass("Clicked on alert button and Captured Alert text");
 	}
 
+	
+//	drag and drop
+	
+	
+//	driver.switchTo().frame(0);		
+//	
+//	Thread.sleep(1500);
+//	
+//	WebElement targetElement = driver.findElement(By.id("droparea"));
+//	Thread.sleep(1500);
+//	
+//
+//	Actions action1=new Actions(driver);
+//		
+//	action1.clickAndHold(sourceElement).moveToElement(targetElement).release().build().perform();
+	
+	
+	
 
 	@AfterSuite
 	public void tearDownTest() {

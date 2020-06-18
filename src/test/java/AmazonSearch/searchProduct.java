@@ -28,18 +28,17 @@ public class searchProduct {
 	
 
 
-//				searchProduct.searchLaptop(driver);
-//				searchProduct.priceRange(driver);
+				searchProduct.searchLaptop(driver);
+				searchProduct.priceRange(driver);
 				
-		searchProduct.googleSearch(driver);
+		//searchProduct.googleSearch(driver);
 
 	} 
 
 
 
-	@Test
+	
 	public static void googleSearch(WebDriver driver) throws InterruptedException {
-
 
 		driver.get("https://www.google.com/"); 
 		
@@ -53,9 +52,7 @@ public class searchProduct {
 
 		List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']//li/descendant::div[@class='sbl1']"));
 
-
 		System.out.println("Total number of suggetions===>" + list.size());
-
 
 		for(int i=0; i<list.size(); i++) {
 			System.out.println(list.get(i).getText());
@@ -66,9 +63,7 @@ public class searchProduct {
 			}
 		}
 
-
 	}
-
 
 
 

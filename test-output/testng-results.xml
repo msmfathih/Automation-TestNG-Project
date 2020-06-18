@@ -1,49 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="1" ignored="0" total="10" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38738" started-at="2020-06-14T11:53:37 GST" finished-at="2020-06-14T11:54:16 GST">
+  <suite name="Default suite" duration-ms="38476" started-at="2020-06-18T11:08:51 GST" finished-at="2020-06-18T11:09:29 GST">
     <groups>
+      <group name="Drop-Down-menu">
+        <method signature="DemoUserRegistrationGrouping.select_Language_Dropdown_Test()[pri:8, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="select_Language_Dropdown_Test" class="TestNGGrouping.DemoUserRegistrationGrouping"/>
+      </group> <!-- Drop-Down-menu -->
+      <group name="Check-boxes">
+        <method signature="DemoUserRegistrationGrouping.select_CheckBoxes_hobby()[pri:7, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="select_CheckBoxes_hobby" class="TestNGGrouping.DemoUserRegistrationGrouping"/>
+      </group> <!-- Check-boxes -->
+      <group name="Date of Birth">
+        <method signature="DemoUserRegistrationGrouping.select_DateofBirth_DropdownTest()[pri:9, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="select_DateofBirth_DropdownTest" class="TestNGGrouping.DemoUserRegistrationGrouping"/>
+      </group> <!-- Date of Birth -->
+      <group name="File upload">
+        <method signature="DemoUserRegistrationGrouping.chooseUploadFileTest()[pri:5, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="chooseUploadFileTest" class="TestNGGrouping.DemoUserRegistrationGrouping"/>
+      </group> <!-- File upload -->
+      <group name="login">
+        <method signature="DemoUserRegistrationGrouping.initialLogin()[pri:1, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="initialLogin" class="TestNGGrouping.DemoUserRegistrationGrouping"/>
+        <method signature="DemoUserRegistrationGrouping.verifyRegisterPageNameTitle()[pri:4, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="verifyRegisterPageNameTitle" class="TestNGGrouping.DemoUserRegistrationGrouping"/>
+        <method signature="DemoUserRegistrationGrouping.verifyTapTitle()[pri:3, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="verifyTapTitle" class="TestNGGrouping.DemoUserRegistrationGrouping"/>
+      </group> <!-- login -->
+      <group name="Form-radio-button">
+        <method signature="DemoUserRegistrationGrouping.select_RadioBtn_GenderTest()[pri:6, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="select_RadioBtn_GenderTest" class="TestNGGrouping.DemoUserRegistrationGrouping"/>
+      </group> <!-- Form-radio-button -->
+      <group name="Mouse-Hover">
+        <method signature="DemoUserRegistrationGrouping.mouseHover_Alertmethod_Test()[pri:10, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="mouseHover_Alertmethod_Test" class="TestNGGrouping.DemoUserRegistrationGrouping"/>
+      </group> <!-- Mouse-Hover -->
+      <group name="fill form">
+        <method signature="DemoUserRegistrationGrouping.fillFormTest()[pri:2, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="fillFormTest" class="TestNGGrouping.DemoUserRegistrationGrouping"/>
+      </group> <!-- fill form -->
     </groups>
-    <test name="Default test" duration-ms="38738" started-at="2020-06-14T11:53:37 GST" finished-at="2020-06-14T11:54:16 GST">
-      <class name="AutomationDemo.DemoUserRegistration">
-        <test-method status="PASS" signature="setUpTest()[pri:0, instance:AutomationDemo.DemoUserRegistration@2d6eabae]" name="setUpTest" is-config="true" duration-ms="9138" started-at="2020-06-14T11:53:37 GST" finished-at="2020-06-14T11:53:46 GST">
+    <test name="Default test" duration-ms="38476" started-at="2020-06-18T11:08:51 GST" finished-at="2020-06-18T11:09:29 GST">
+      <class name="TestNGGrouping.DemoUserRegistrationGrouping">
+        <test-method status="PASS" signature="setUpTest()[pri:0, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="setUpTest" is-config="true" duration-ms="9478" started-at="2020-06-18T11:08:51 GST" finished-at="2020-06-18T11:09:00 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="fillFormTest()[pri:1, instance:AutomationDemo.DemoUserRegistration@2d6eabae]" name="fillFormTest" duration-ms="2397" started-at="2020-06-14T11:53:46 GST" finished-at="2020-06-14T11:53:49 GST">
+        <test-method status="PASS" signature="initialLogin()[pri:1, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="initialLogin" duration-ms="5026" started-at="2020-06-18T11:09:00 GST" finished-at="2020-06-18T11:09:05 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialLogin -->
+        <test-method status="PASS" signature="fillFormTest()[pri:2, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="fillFormTest" duration-ms="3286" started-at="2020-06-18T11:09:05 GST" finished-at="2020-06-18T11:09:09 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormTest -->
-        <test-method status="PASS" signature="chooseUploadFileTest()[pri:2, instance:AutomationDemo.DemoUserRegistration@2d6eabae]" name="chooseUploadFileTest" duration-ms="1625" started-at="2020-06-14T11:53:49 GST" finished-at="2020-06-14T11:53:50 GST">
+        <test-method status="PASS" signature="verifyTapTitle()[pri:3, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="verifyTapTitle" duration-ms="15" started-at="2020-06-18T11:09:09 GST" depends-on-methods="TestNGGrouping.DemoUserRegistrationGrouping.initialLogin" finished-at="2020-06-18T11:09:09 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTapTitle -->
+        <test-method status="PASS" signature="verifyRegisterPageNameTitle()[pri:4, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="verifyRegisterPageNameTitle" duration-ms="62" started-at="2020-06-18T11:09:09 GST" depends-on-methods="TestNGGrouping.DemoUserRegistrationGrouping.initialLogin" finished-at="2020-06-18T11:09:09 GST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterPageNameTitle -->
+        <test-method status="PASS" signature="chooseUploadFileTest()[pri:5, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="chooseUploadFileTest" duration-ms="1640" started-at="2020-06-18T11:09:09 GST" finished-at="2020-06-18T11:09:10 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chooseUploadFileTest -->
-        <test-method status="PASS" signature="select_RadioBtn_GenderTest()[pri:3, instance:AutomationDemo.DemoUserRegistration@2d6eabae]" name="select_RadioBtn_GenderTest" duration-ms="196" started-at="2020-06-14T11:53:50 GST" finished-at="2020-06-14T11:53:50 GST">
+        <test-method status="PASS" signature="select_RadioBtn_GenderTest()[pri:6, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="select_RadioBtn_GenderTest" duration-ms="182" started-at="2020-06-18T11:09:10 GST" finished-at="2020-06-18T11:09:11 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- select_RadioBtn_GenderTest -->
-        <test-method status="PASS" signature="select_CheckBoxes_hobby()[pri:4, instance:AutomationDemo.DemoUserRegistration@2d6eabae]" name="select_CheckBoxes_hobby" duration-ms="370" started-at="2020-06-14T11:53:50 GST" finished-at="2020-06-14T11:53:51 GST">
+        <test-method status="FAIL" signature="select_CheckBoxes_hobby()[pri:7, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="select_CheckBoxes_hobby" duration-ms="17" started-at="2020-06-18T11:09:11 GST" finished-at="2020-06-18T11:09:11 GST">
+          <exception class="org.testng.internal.thread.ThreadTimeoutException">
+            <message>
+              <![CDATA[Method TestNGGrouping.DemoUserRegistrationGrouping.select_CheckBoxes_hobby() didn't finish within the time-out 10]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.thread.ThreadTimeoutException: Method TestNGGrouping.DemoUserRegistrationGrouping.select_CheckBoxes_hobby() didn't finish within the time-out 10
+at org.testng.internal.MethodInvocationHelper.invokeWithTimeoutWithNewExecutor(MethodInvocationHelper.java:374)
+at org.testng.internal.MethodInvocationHelper.invokeWithTimeout(MethodInvocationHelper.java:285)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:604)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.thread.ThreadTimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- select_CheckBoxes_hobby -->
-        <test-method status="PASS" signature="select_Language_Dropdown_Test()[pri:5, instance:AutomationDemo.DemoUserRegistration@2d6eabae]" name="select_Language_Dropdown_Test" duration-ms="764" started-at="2020-06-14T11:53:51 GST" finished-at="2020-06-14T11:53:52 GST">
+        <test-method status="PASS" signature="select_Language_Dropdown_Test()[pri:8, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="select_Language_Dropdown_Test" duration-ms="1027" started-at="2020-06-18T11:09:11 GST" finished-at="2020-06-18T11:09:12 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- select_Language_Dropdown_Test -->
-        <test-method status="PASS" signature="select_DateofBirth_DropdownTest()[pri:6, instance:AutomationDemo.DemoUserRegistration@2d6eabae]" name="select_DateofBirth_DropdownTest" duration-ms="16520" started-at="2020-06-14T11:53:52 GST" finished-at="2020-06-14T11:54:08 GST">
+        <test-method status="PASS" signature="select_DateofBirth_DropdownTest()[pri:9, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="select_DateofBirth_DropdownTest" duration-ms="6261" started-at="2020-06-18T11:09:12 GST" finished-at="2020-06-18T11:09:18 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- select_DateofBirth_DropdownTest -->
-        <test-method status="PASS" signature="mouseHover_Alertmethod_Test()[pri:7, instance:AutomationDemo.DemoUserRegistration@2d6eabae]" name="mouseHover_Alertmethod_Test" duration-ms="7183" started-at="2020-06-14T11:54:08 GST" finished-at="2020-06-14T11:54:15 GST">
+        <test-method status="PASS" signature="mouseHover_Alertmethod_Test()[pri:10, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="mouseHover_Alertmethod_Test" duration-ms="10339" started-at="2020-06-18T11:09:18 GST" finished-at="2020-06-18T11:09:28 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mouseHover_Alertmethod_Test -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:AutomationDemo.DemoUserRegistration@2d6eabae]" name="tearDownTest" is-config="true" duration-ms="445" started-at="2020-06-14T11:54:15 GST" finished-at="2020-06-14T11:54:16 GST">
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:TestNGGrouping.DemoUserRegistrationGrouping@48503868]" name="tearDownTest" is-config="true" duration-ms="1017" started-at="2020-06-18T11:09:28 GST" finished-at="2020-06-18T11:09:29 GST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
-      </class> <!-- AutomationDemo.DemoUserRegistration -->
+      </class> <!-- TestNGGrouping.DemoUserRegistrationGrouping -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
